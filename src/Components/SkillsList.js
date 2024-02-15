@@ -32,7 +32,14 @@ function Skill(props) {
         padding: "1px 5px",
       }}
     >
-      {props.ele.skill} {props.ele.emoji}
+      {props.ele.skill}{" "}
+      {props.ele.level === "advanced"
+        ? "==> adva"
+        : props.ele.level === "intermediate"
+        ? "==> inter"
+        : props.ele.level === "beginner"
+        ? "==> begi"
+        : ""}
     </li>
   );
 }
